@@ -1,28 +1,28 @@
-// const arr = ["ID,Name,Occupation,Age,\n42,Bruce,Knight,41,\n57,Bob,Fry Cook,19,\n63,Blaine,Quiz Master,58,\n98,Bill,Doctor’s Assistant,26"]
-// let cell = "";
-// let row = [];
-// function sectionArr(){
-//     for(let i = 0; i < arr.length; i++){
-//         let c = arr[i];
-//         if(c === ","){
-//             row.push(cell)
-//             cell = "";
-//         } else if (c === "\n"){
-//             row.push(cell)
-//             console.log(...row)
-//             cell = "";
-//             row = [];
-//         } else {
-//             cell += c;
-//         }
-//     }
-//     if (cell.length > 0) {
-//         row.push(cell);
-//         console.log(...row);
-//     }
-// }
+const arr = ["ID,Name,Occupation,Age,\n42,Bruce,Knight,41,\n57,Bob,Fry Cook,19,\n63,Blaine,Quiz Master,58,\n98,Bill,Doctor’s Assistant,26"]
+let cell = "";
+let row = [];
+function sectionArr(){
+    for(let i = 0; i < arr.length; i++){
+        let c = arr[i];
+        if(c === ","){
+            row.push(cell)
+            cell = "";
+        } else if (c === "\n"){
+            row.push(cell)
+            console.log(...row)
+            cell = "";
+            row = [];
+        } else {
+            cell += c;
+        }
+    }
+    if (cell.length > 0) {
+        row.push(cell);
+        console.log(...row);
+    }
+}
 
-// sectionArr()
+sectionArr()
 
 let newArr = [{ id: "42", name: "Bruce", occupation: "Knight", age: "41" },
     { id: "57", name: "Bob", occupation: "Fry Cook", age: "19" },
